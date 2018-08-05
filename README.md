@@ -32,7 +32,7 @@ Include
 08. aapt
 09. fernflower
 10. oat2dex
-11. zipalig
+11. zipalign
 
 Requirment
 ==========

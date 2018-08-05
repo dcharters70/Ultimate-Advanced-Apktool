@@ -12,7 +12,7 @@ Features
 06. oat2dex, odex2dex
 07. Jar decompiler
 08. Apk to jar
-09. Multiple apk decompile, recompile, sign, zipalign (safe : one by one method)
+09. Multiple apk decompile, recompile, sign, zipalign ( safe : one by one method )
 10. HTML / Website to App
 11. JD-GUI
 12. App status

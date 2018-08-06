@@ -26,7 +26,7 @@ Include
 02. ApkShellext2
 03. Apktool
 04. Baksmali / smali
-05. Dex2jarCRLF
+05. Dex2jar
 06. JD-GUI
 07. Signapk , testkey.pk8, testkey.x509.pem
 08. aapt
@@ -51,3 +51,7 @@ Credits
 05. Dex2jar : Bob Pan
 06. oat2dex : Softdx
 07. etc.
+
+Note
+====
+Some binary old, need to update.

@@ -981,7 +981,7 @@ Public Class NGA
             Dim fileinfo As New FileInfo(TextBox3.Text)
             Dim GetPath = fileinfo.DirectoryName & "\" & My.Computer.FileSystem.GetName(TextBox3.Text) & ".baksmali"
             Try
-                Shell("java.exe -jar bin\baksmali.jar -o " & """" & GetPath & """ " & """" & TextBox3.Text & """", AppWinStyle.NormalFocus)
+                Shell("java.exe -jar bin\baksmali.jar d -o " & """" & GetPath & """ " & """" & TextBox3.Text & """", AppWinStyle.NormalFocus)
             Catch ex As Exception
                 Me.RichTextBox5.Text = ex.ToString
             End Try

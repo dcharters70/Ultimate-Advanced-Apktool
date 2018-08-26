@@ -424,7 +424,7 @@ Public Class NGA
     Private Sub TextBox24_DragDrop(sender As System.Object, e As System.Windows.Forms.DragEventArgs) Handles TextBox24.DragDrop
         Dim strArray() As String = CType(e.Data.GetData(DataFormats.FileDrop), String())
         TextBox24.Text = (strArray(0))
-        TextBox25.Text = "Deodex_Output\" & Replace(My.Computer.FileSystem.GetFileInfo(TextBox24.Text).Name, My.Computer.FileSystem.GetFileInfo(TextBox24.Text).Extension, "")
+        TextBox25.Text = "Output\Deodex\" & Replace(My.Computer.FileSystem.GetFileInfo(TextBox24.Text).Name, My.Computer.FileSystem.GetFileInfo(TextBox24.Text).Extension, "")
     End Sub
 
     Private Sub TextBox24_DragEnter(sender As System.Object, e As System.Windows.Forms.DragEventArgs) Handles TextBox24.DragEnter
@@ -1390,7 +1390,7 @@ Public Class NGA
         If Not TextBox23.Text.Length = 0 Then
             If Not TextBox24.Text.Length = 0 Then
                 Try
-                    Shell("java.exe -jar bin\dex2jar\baksmali.jar -d " & """" & TextBox23.Text & """" & " -o " & """" & TextBox25.Text & """" & " -x " & """" & TextBox24.Text & """", AppWinStyle.NormalFocus, False)
+                    Shell("java.exe -jar bin\baksmali.jar x -a 9 -d " & """" & TextBox23.Text & """" & " -o " & """" & TextBox25.Text & """" & " " & """" & TextBox24.Text & """", AppWinStyle.NormalFocus, False)
                 Catch ex As Exception
                     RichTextBox5.Text = ex.ToString
                 End Try
@@ -1451,11 +1451,11 @@ Public Class NGA
                         Dim FIS As IO.FileInfo
                         If CheckBox12.Checked = True Then
                             For Each FIS In FI
-                                Shell("java.exe -jar bin\baksmali.jar -d " & """" & TextBox28.Text & """" & " -o " & """" & TextBox26.Text & "\" & Replace(FIS.ToString, My.Computer.FileSystem.GetFileInfo(FIS.ToString).Extension, "") & """" & " -x " & """" & TextBox27.Text & "\" & FIS.ToString & """", AppWinStyle.NormalFocus, True)
+                                Shell("java.exe -jar bin\baksmali.jar x -d " & """" & TextBox28.Text & """" & " -o " & """" & TextBox26.Text & "\" & Replace(FIS.ToString, My.Computer.FileSystem.GetFileInfo(FIS.ToString).Extension, "") & """" & " " & """" & TextBox27.Text & "\" & FIS.ToString & """", AppWinStyle.NormalFocus, True)
                             Next
                         Else
                             For Each FIS In FI
-                                Shell("java.exe -jar bin\baksmali.jar -d " & """" & TextBox28.Text & """" & " -o " & """" & TextBox26.Text & "\" & Replace(FIS.ToString, My.Computer.FileSystem.GetFileInfo(FIS.ToString).Extension, "") & """" & " -x " & """" & TextBox27.Text & "\" & FIS.ToString & """", AppWinStyle.NormalFocus, False)
+                                Shell("java.exe -jar bin\baksmali.jar x -d " & """" & TextBox28.Text & """" & " -o " & """" & TextBox26.Text & "\" & Replace(FIS.ToString, My.Computer.FileSystem.GetFileInfo(FIS.ToString).Extension, "") & """" & " " & """" & TextBox27.Text & "\" & FIS.ToString & """", AppWinStyle.NormalFocus, False)
                             Next
                         End If
                     Catch ex As Exception

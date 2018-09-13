@@ -303,7 +303,7 @@ Partial Class NGA
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(28, 13)
         Me.Label41.TabIndex = 3
-        Me.Label41.Text = "v4.0"
+        Me.Label41.Text = "v4.1"
         '
         'Button2
         '

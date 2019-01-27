@@ -2837,7 +2837,7 @@ Partial Class NGA
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(210, 24)
         Me.Label34.TabIndex = 5
-        Me.Label34.Text = "Copyright © 2015 - 2018"
+        Me.Label34.Text = "Copyright © 2015 - 2019"
         '
         'Label17
         '
